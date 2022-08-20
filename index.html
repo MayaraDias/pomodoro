@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+
+    <!--================ LINKS ==================================-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/hourglass.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="timer">
+          <span class="minutes">00</span>
+          <span>:</span>
+          <span class="seconds">00</span>
+        </div>
+        <div class="controls">
+          <button class="play"><i class="uil uil-play"></i></button>
+          <button class="pause hide"><i class="uil uil-pause"></i></button>
+          <button class="stop hide"><i class="uil uil-stop-circle"></i></button>
+          <button class="set"><i class="uil uil-stopwatch"></i></button>
+          <button class="plus"><i class="uil uil-plus"></i></button>
+          <button class="minus"><i class="uil uil-minus"></i></button>
+        </div>
+      </div>
+
+      <div class="sounds">
+        <button class="card card1">
+          <i class="uil uil-trees"></i>
+        </button>
+        <button class="card card2">
+          <i class="uil uil-cloud-showers-heavy"></i>
+        </button>
+        <button class="card card3">
+          <i class="uil uil-store"></i>
+        </button>
+        <button class="card card4">
+          <i class="uil uil-fire"></i>
+        </button>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

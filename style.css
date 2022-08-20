@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --hue: 194;
+  --cards-color-hover: hsl(var(--hue) 97% 31%);
+  --cards-color: hsl(calc(var(--hue) + 46) 9% 89%);
+  --controls-color: hsl(var(--hue) 97% 22%);
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  margin-top: 5rem;
+}
+
+main {
+  display: flex;
+  gap: 19rem;
+  padding: 10rem;
+}
+
+i {
+  font-size: 4.8rem;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timer {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 10rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.controls button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/*<============ CARDS =============>*/
+.sounds {
+  display: grid;
+  grid-template-areas: 'A B';
+  gap: 4rem;
+  align-items: center;
+}
+
+.sounds i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  font-size: 7rem;
+}
+
+.card {
+  width: 13.8rem;
+  height: 15.2rem;
+  background-color: var(--cards-color);
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.card:active {
+  background-color: var(--cards-color-hover);
+}
