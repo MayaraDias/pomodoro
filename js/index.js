@@ -1,30 +1,41 @@
 import Sound from './sound.js'
+import Timer from './timer.js'
+import {
+  buttonPlay,
+  buttonPause,
+  buttonStop,
+  buttonSet,
+  buttonPlus,
+  buttonMinus,
+  buttonForest,
+  buttonRain,
+  buttonStore,
+  buttonFire,
+  displayMinutes,
+  displaySeconds,
+  timerTimerOut
+} from './elements.js'
 
-const buttonPlay = document.querySelector('.play')
-const buttonPause = document.querySelector('.pause')
-const buttonStop = document.querySelector('.stop')
-const buttonSet = document.querySelector('.set')
-const displayMinutes = document.querySelector('.minutes')
-const displaySeconds = document.querySelector('.seconds')
 let minutes = Number(displayMinutes.textContent)
-let timerTimerOut
-
-const buttonPlus = document.querySelector('.plus')
-const buttonMinus = document.querySelector('.minus')
-
-const buttonForest = document.querySelector('.florest')
-const buttonRain = document.querySelector('.rain')
 
 const sound = Sound()
 
-/** ========= buttons ======================== */
+const timer = Timer({
+  displayMinutes,
+  displaySeconds,
+  timerTimerOut,
+  reset,
+  minutes
+})
+
+/** ========= buttons - controls ======================== */
 
 function pressButtonPlayShowButtonPause() {
   buttonPlay.classList.add('hide')
   buttonPause.classList.remove('hide')
   buttonSet.classList.add('hide')
   buttonStop.classList.remove('hide')
-  countDown()
+  timer.countDown()
   sound.pressButtonPlay()
 }
 
@@ -35,15 +46,9 @@ function pressButtonPauseShowButtonPlay() {
   sound.pressButtonPlay()
 }
 
-function pressFlorest() {
-  sound.audioFlorest()
-}
-
-buttonForest.addEventListener('click', pressFlorest)
-
-function updateMinutes(newMinutes) {
-  minutes = newMinutes
-}
+buttonPlay.addEventListener('click', pressButtonPlayShowButtonPause)
+buttonPause.addEventListener('click', pressButtonPauseShowButtonPlay)
+buttonSet.addEventListener('click', pressButtonSetShowPrompt)
 
 function pressButtonSetShowPrompt() {
   let newMinutes = Number(prompt('Quantos minutos?:'))
@@ -54,34 +59,41 @@ function pressButtonSetShowPrompt() {
     return
   }
 
-  updateDisplay(newMinutes, 0)
-  updateMinutes(newMinutes)
+  timer.updateDisplay(newMinutes, 0)
+  timer.updateMinutes(newMinutes)
 }
 
-function pressButtonStopResetControls() {
-  buttonStop.classList.add('hide')
-  buttonSet.classList.remove('hide')
-  buttonPause.classList.add('hide')
-  buttonPlay.classList.remove('hide')
+function pressFlorest() {
+  sound.audioFlorest()
 }
 
-buttonPlay.addEventListener('click', pressButtonPlayShowButtonPause)
-buttonPause.addEventListener('click', pressButtonPauseShowButtonPlay)
-buttonSet.addEventListener('click', pressButtonSetShowPrompt)
-buttonStop.addEventListener('click', pressButtonStopResetControls)
-
-/* ============= timer =================* */
-function updateDisplay(newMinutes, seconds) {
-  newMinutes = newMinutes === undefined ? minutes : newMinutes
-  seconds = seconds === undefined ? 0 : seconds
-  displayMinutes.textContent = String(newMinutes).padStart(2, '0')
-  displaySeconds.textContent = String(seconds).padStart(2, '0')
+function pressRain() {
+  sound.audioRain()
 }
+
+function pressStore() {
+  sound.audioStore()
+}
+
+function pressFire() {
+  sound.audioFire()
+}
+
+buttonForest.addEventListener('click', pressFlorest)
+buttonRain.addEventListener('click', pressRain)
+buttonStore.addEventListener('click', pressStore)
+buttonFire.addEventListener('click', pressFire)
 
 function reset() {
-  updateDisplay(minutes, 0)
-  sound.pauseAndPlay()
+  timer.updateDisplay(minutes, 0)
+  pauseAndPlay()
   resetControls()
+}
+
+buttonStop.addEventListener('click', reset)
+
+function pauseAndPlay() {
+  clearTimeout(timerTimerOut)
 }
 
 function resetControls() {
@@ -92,9 +104,7 @@ function resetControls() {
   buttonSet.classList.remove('hide')
 }
 
-function pauseAndPlay() {
-  clearTimeout(timerTimerOut)
-}
+buttonStop.addEventListener('click', resetControls)
 
 function addTime() {
   minutes = minutes + 5
@@ -114,31 +124,3 @@ function minusTime() {
 
 buttonPlus.addEventListener('click', addTime)
 buttonMinus.addEventListener('click', minusTime)
-
-function countDown() {
-  timerTimerOut = setTimeout(function () {
-    let seconds = Number(displaySeconds.textContent)
-    let minutes = Number(displayMinutes.textContent)
-
-    updateDisplay(minutes, 0)
-
-    if (minutes <= 0 && seconds <= 0) {
-      reset()
-      updateDisplay()
-      sound.timerEnd()
-      return
-    }
-
-    if (seconds <= 0) {
-      seconds = 60
-      --minutes
-    }
-
-    updateDisplay(minutes, String(seconds - 1))
-    countDown()
-  }, 1000)
-}
-
-buttonStop.addEventListener('click', reset)
-
-/**================ SOUNDS ==================== */

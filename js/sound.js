@@ -10,6 +10,23 @@ export default function () {
     'https://github.com/MayaraDias/pomodoro/blob/master/audio/Floresta.wav?raw=true'
   )
 
+  const bgAudioRain = new Audio(
+    'https://github.com/MayaraDias/pomodoro/blob/master/audio/rain.wav?raw=true'
+  )
+
+  const bgAudioStore = new Audio(
+    'https://github.com/MayaraDias/pomodoro/blob/master/audio/store.wav?raw=true'
+  )
+
+  const bgAudioFire = new Audio(
+    'https://github.com/MayaraDias/pomodoro/blob/master/audio/fire.wav?raw=true'
+  )
+
+  bgAudioFlorest.loop = true
+  bgAudioRain.loop = true
+  bgAudioStore.loop = true
+  bgAudioFire.loop = true
+
   function pressButtonPlay() {
     buttonPressAudio.play()
   }
@@ -20,11 +37,43 @@ export default function () {
 
   function audioFlorest() {
     bgAudioFlorest.play()
+    bgAudioRain.pause()
+    bgAudioStore.pause()
+  }
+
+  function audioRain() {
+    bgAudioRain.play()
+    bgAudioFlorest.pause()
+    bgAudioStore.pause()
+  }
+
+  function audioStore() {
+    bgAudioStore.play()
+    bgAudioFlorest.pause()
+    bgAudioRain.pause()
+  }
+
+  function audioFire() {
+    bgAudioFire.play()
+    bgAudioStore.pause()
+    bgAudioFlorest.pause()
+    bgAudioRain.pause()
+  }
+
+  function resetAudios() {
+    bgAudioFire.pause()
+    bgAudioStore.pause()
+    bgAudioFlorest.pause()
+    bgAudioRain.pause()
   }
 
   return {
     pressButtonPlay,
     timerEnd,
-    audioFlorest
+    audioFlorest,
+    audioRain,
+    audioStore,
+    audioFire,
+    resetAudios
   }
 }
