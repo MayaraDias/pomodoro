@@ -85,3 +85,23 @@ i {
 .card:active {
   background-color: var(--cards-color-hover);
 }
+
+/* ========== RESPONSIVIDADE ================*/
+@media (max-width: 768) {
+  body {
+    display: flex;
+  }
+
+  main {
+    display: block;
+    margin: auto;
+  }
+
+  .container {
+    margin-bottom: 5rem;
+  }
+
+  .sounds {
+    margin: auto;
+  }
+}
