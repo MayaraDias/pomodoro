@@ -22,10 +22,19 @@ export default function () {
     'https://github.com/MayaraDias/pomodoro/blob/master/audio/fire.wav?raw=true'
   )
 
+  const setSoundFlorest = document.querySelector('#florest')
+  const setSoundRain = document.querySelector('#rain')
+  const setSoundStore = document.querySelector('#store')
+  const setSoundFire = document.querySelector('#fire')
+
   bgAudioFlorest.loop = true
   bgAudioRain.loop = true
   bgAudioStore.loop = true
   bgAudioFire.loop = true
+
+  function setVolume(som, volume) {
+    som.volume = volume.value / 100
+  }
 
   function pressButtonPlay() {
     buttonPressAudio.play()
@@ -36,32 +45,35 @@ export default function () {
   }
 
   function audioFlorest() {
+    setSoundFlorest.addEventListener(
+      'input',
+      setVolume(bgAudioFlorest, setSoundFlorest)
+    )
     bgAudioFlorest.play()
     bgAudioRain.pause()
     bgAudioStore.pause()
   }
 
   function audioRain() {
+    setSoundRain.addEventListener('input', setVolume(bgAudioRain, setSoundRain))
     bgAudioRain.play()
     bgAudioFlorest.pause()
     bgAudioStore.pause()
   }
 
   function audioStore() {
+    setSoundStore.addEventListener(
+      'input',
+      setVolume(bgAudioStore, setSoundStore)
+    )
     bgAudioStore.play()
     bgAudioFlorest.pause()
     bgAudioRain.pause()
   }
 
   function audioFire() {
+    setSoundFire.addEventListener('input', setVolume(bgAudioFire, setSoundFire))
     bgAudioFire.play()
-    bgAudioStore.pause()
-    bgAudioFlorest.pause()
-    bgAudioRain.pause()
-  }
-
-  function resetAudios() {
-    bgAudioFire.pause()
     bgAudioStore.pause()
     bgAudioFlorest.pause()
     bgAudioRain.pause()
@@ -73,7 +85,6 @@ export default function () {
     audioFlorest,
     audioRain,
     audioStore,
-    audioFire,
-    resetAudios
+    audioFire
   }
 }

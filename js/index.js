@@ -1,5 +1,6 @@
 import Sound from './sound.js'
 import Timer from './timer.js'
+import Controls from './controls.js'
 import {
   buttonPlay,
   buttonPause,
@@ -13,7 +14,13 @@ import {
   buttonFire,
   displayMinutes,
   displaySeconds,
-  timerTimerOut
+  timerTimerOut,
+  buttonCardFlorest,
+  buttonCardRain,
+  buttonCardStore,
+  buttonCardFire,
+  buttonTurnOn,
+  buttonTurnOff
 } from './elements.js'
 
 let minutes = Number(displayMinutes.textContent)
@@ -23,42 +30,44 @@ const sound = Sound()
 const timer = Timer({
   displayMinutes,
   displaySeconds,
-  timerTimerOut,
-  reset,
   minutes
 })
 
-/** ========= buttons - controls ======================== */
+const controls = Controls({
+  buttonPlay,
+  buttonPause,
+  buttonSet,
+  buttonStop,
+  displayMinutes,
+  timerTimerOut
+})
 
-function pressButtonPlayShowButtonPause() {
-  buttonPlay.classList.add('hide')
-  buttonPause.classList.remove('hide')
-  buttonSet.classList.add('hide')
-  buttonStop.classList.remove('hide')
+function clickButtonPlayShowButtonPause() {
+  controls.play()
   timer.countDown()
   sound.pressButtonPlay()
 }
 
-function pressButtonPauseShowButtonPlay() {
-  buttonPause.classList.toggle('hide')
-  buttonPlay.classList.toggle('hide')
-  pauseAndPlay()
+function clickButtonPauseShowButtonPlay() {
+  controls.pause()
+  timer.hold()
   sound.pressButtonPlay()
 }
 
-buttonPlay.addEventListener('click', pressButtonPlayShowButtonPause)
-buttonPause.addEventListener('click', pressButtonPauseShowButtonPlay)
-buttonSet.addEventListener('click', pressButtonSetShowPrompt)
+function clickButtonStopResetControls() {
+  controls.resetControls()
+  timer.reseted()
+  sound.pressButtonPlay()
+}
 
 function pressButtonSetShowPrompt() {
   let newMinutes = Number(prompt('Quantos minutos?:'))
   displayMinutes.textContent = newMinutes
 
   if (!newMinutes) {
-    reset()
+    timer.reseted()
     return
   }
-
   timer.updateDisplay(newMinutes, 0)
   timer.updateMinutes(newMinutes)
 }
@@ -79,35 +88,24 @@ function pressFire() {
   sound.audioFire()
 }
 
-buttonForest.addEventListener('click', pressFlorest)
-buttonRain.addEventListener('click', pressRain)
-buttonStore.addEventListener('click', pressStore)
-buttonFire.addEventListener('click', pressFire)
-
-function reset() {
-  timer.updateDisplay(minutes, 0)
-  pauseAndPlay()
-  resetControls()
+function selectCardFlorest() {
+  controls.pressCardFlorest()
 }
 
-buttonStop.addEventListener('click', reset)
-
-function pauseAndPlay() {
-  clearTimeout(timerTimerOut)
+function selectCardRain() {
+  controls.pressCardRain()
 }
 
-function resetControls() {
-  buttonStop.classList.add('hide')
-  buttonSet.classList.remove('hide')
-  buttonPause.classList.add('hide')
-  buttonPlay.classList.remove('hide')
-  buttonSet.classList.remove('hide')
+function selectCardStore() {
+  controls.pressCardStore()
 }
 
-buttonStop.addEventListener('click', resetControls)
+function selectCardFire() {
+  controls.pressCardFire()
+}
 
 function addTime() {
-  minutes = minutes + 5
+  minutes = Number(displayMinutes.textContent) + 5
   if (minutes > 90) {
     minutes = 0
   }
@@ -115,12 +113,39 @@ function addTime() {
 }
 
 function minusTime() {
-  minutes = minutes - 5
+  minutes = Number(displayMinutes.textContent) - 5
   if (minutes < 0) {
     minutes = 0
   }
   displayMinutes.textContent = String(minutes).padStart(2, '0')
 }
+
+function showTurnOn() {
+  controls.turnOnButton()
+}
+
+function showTurnOff() {
+  controls.turnOffButton()
+}
+
+buttonTurnOn.addEventListener('click', showTurnOn)
+buttonTurnOff.addEventListener('click', showTurnOff)
+
+buttonPlay.addEventListener('click', clickButtonPlayShowButtonPause)
+buttonPause.addEventListener('click', clickButtonPauseShowButtonPlay)
+buttonStop.addEventListener('click', clickButtonStopResetControls)
+
+buttonSet.addEventListener('click', pressButtonSetShowPrompt)
+
+buttonForest.addEventListener('click', pressFlorest)
+buttonRain.addEventListener('click', pressRain)
+buttonStore.addEventListener('click', pressStore)
+buttonFire.addEventListener('click', pressFire)
+
+buttonCardFlorest.addEventListener('click', selectCardFlorest)
+buttonCardRain.addEventListener('click', selectCardRain)
+buttonCardStore.addEventListener('click', selectCardStore)
+buttonCardFire.addEventListener('click', selectCardFire)
 
 buttonPlus.addEventListener('click', addTime)
 buttonMinus.addEventListener('click', minusTime)

@@ -1,12 +1,9 @@
+import Controls from './controls.js'
 import Sound from './sound.js'
 
-export default function Timer({
-  displayMinutes,
-  displaySeconds,
-  minutes,
-  timerTimerOut,
-  reset
-}) {
+export default function Timer({ displayMinutes, displaySeconds, minutes }) {
+  let timerTimerOut
+
   function updateMinutes(newMinutes) {
     minutes = newMinutes
   }
@@ -18,6 +15,15 @@ export default function Timer({
     displaySeconds.textContent = String(seconds).padStart(2, '0')
   }
 
+  function reseted() {
+    updateDisplay(minutes, 0)
+    clearTimeout(timerTimerOut)
+  }
+
+  function hold() {
+    clearTimeout(timerTimerOut)
+  }
+
   function countDown() {
     timerTimerOut = setTimeout(function () {
       let seconds = Number(displaySeconds.textContent)
@@ -26,7 +32,7 @@ export default function Timer({
       updateDisplay(minutes, 0)
 
       if (minutes <= 0 && seconds <= 0) {
-        reset()
+        reseted()
         updateDisplay()
         Sound().timerEnd()
         return
@@ -45,6 +51,8 @@ export default function Timer({
   return {
     updateDisplay,
     updateMinutes,
-    countDown
+    countDown,
+    reseted,
+    hold
   }
 }

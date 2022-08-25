@@ -10,6 +10,7 @@
   --cards-color-hover: hsl(var(--hue) 97% 31%);
   --cards-color: hsl(calc(var(--hue) + 46) 9% 89%);
   --controls-color: hsl(var(--hue) 97% 22%);
+  --dark-color: #000000;
   font-size: 62.5%;
 }
 
@@ -17,6 +18,11 @@ body {
   display: grid;
   justify-items: center;
   margin-top: 5rem;
+}
+
+body .darkAndLightMode {
+  position: fixed;
+  right: 25rem;
 }
 
 main {
@@ -82,12 +88,35 @@ i {
   cursor: pointer;
 }
 
-.card:active {
+.cardClick {
   background-color: var(--cards-color-hover);
 }
 
+/*=========== Dark and light mode ===========*/
+.dark {
+  background-color: var(--dark-color);
+}
+
+#turnOff,
+#turnOn {
+  cursor: pointer;
+}
+
+body.dark .controls i {
+  color: white;
+}
+
+body.dark .minutes,
+body.dark span,
+body.dark .seconds {
+  color: white;
+}
+
+body.dark #turnOff {
+  color: white;
+}
 /* ========== RESPONSIVIDADE ================*/
-@media (max-width: 768) {
+@media (max-width: 768px) {
   body {
     display: flex;
   }
@@ -103,5 +132,10 @@ i {
 
   .sounds {
     margin: auto;
+  }
+
+  body .darkAndLightMode {
+    position: fixed;
+    right: 22rem;
   }
 }

@@ -15,6 +15,14 @@ const buttonRain = document.querySelector('.rain')
 const buttonStore = document.querySelector('.store')
 const buttonFire = document.querySelector('.fire')
 
+const buttonTurnOff = document.querySelector('#turnOff')
+const buttonTurnOn = document.querySelector('#turnOn')
+
+const buttonCardFlorest = document.querySelector('.florest')
+const buttonCardRain = document.querySelector('.rain')
+const buttonCardStore = document.querySelector('.store')
+const buttonCardFire = document.querySelector('.fire')
+
 export {
   buttonPlay,
   buttonPause,
@@ -28,5 +36,11 @@ export {
   buttonFire,
   displayMinutes,
   displaySeconds,
-  timerTimerOut
+  timerTimerOut,
+  buttonTurnOff,
+  buttonTurnOn,
+  buttonCardFlorest,
+  buttonCardRain,
+  buttonCardStore,
+  buttonCardFire
 }

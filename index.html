@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="darkAndLightMode">
+      <i class="uil uil-moon hide" id="turnOff"></i>
+      <i class="uil uil-brightness" id="turnOn"></i>
+    </div>
     <main>
       <div class="container">
         <div class="timer">
@@ -45,15 +49,59 @@
       <div class="sounds">
         <button class="card florest">
           <i class="uil uil-trees"></i>
+          <div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              step="0.1"
+              name="florest"
+              id="florest"
+            />
+          </div>
         </button>
         <button class="card rain">
           <i class="uil uil-cloud-showers-heavy"></i>
+          <div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              step="0.1"
+              name="rain"
+              id="rain"
+            />
+          </div>
         </button>
         <button class="card store">
           <i class="uil uil-store"></i>
+          <div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              step="0.1"
+              name="store"
+              id="store"
+            />
+          </div>
         </button>
         <button class="card fire">
           <i class="uil uil-fire"></i>
+          <div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              step="0.1"
+              name="florest"
+              id="fire"
+            />
+          </div>
         </button>
       </div>
     </main>
