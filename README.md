@@ -64,3 +64,24 @@ a ser contato e reseta o tempo ao início
 ![Pomodoro](https://user-images.githubusercontent.com/86054136/186795552-13f0690e-b903-4ca9-a79e-760161ebcda3.gif)
 
 
+## :rocket: Tecnologias utilizadas e conceitos utilizados
+
+* HTML
+* CSS
+* Javascript
+
+### Módulos no Javascript
+
+Nesse projeto foi utilizado o conceito de modularização do javascript.
+Os módulos do 
+O objetivo da modularização do Javascript é facilitar na manutenção do código, dividir as responsabilidades, uma vez que os códigos podem ficar muito grandes o que complicaria na hora de fazer a manutenção, por exemplo.
+São utilizados 
+
+
+### :pencil: Referências
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules
+
+
+
+
