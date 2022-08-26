@@ -138,4 +138,11 @@ body.dark #turnOff {
     position: fixed;
     right: 22rem;
   }
+
+  @media (max-width: 475px) {
+    body .darkAndLightMode {
+      position: fixed;
+      right: 12rem;
+    }
+  }
 }
