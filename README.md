@@ -40,7 +40,8 @@ O temporizador também foi desenvolvido para o tema escuro
 
 
 
-## Funcionalidades 
+
+### :hammer_and_wrench:Funcionalidades 
 
 
 Para o controle do temporizador temos os botões play, pause, adicionar mais 5 (cinco) minutos e decrementar 5 (cinco) minutos
@@ -49,15 +50,15 @@ Para o controle do temporizador temos os botões play, pause, adicionar mais 5 (
 <img width="280" alt="image" src="https://user-images.githubusercontent.com/86054136/186791647-7c0ddbc1-fb60-4cf8-b696-59939d331fd9.png">
 </p>
 
-* <img width="47" alt="image" src="https://user-images.githubusercontent.com/86054136/186791776-9ef28ef4-7d0b-4078-86f9-412223defc07.png">: play / pause - aciona 
+* <img width="47" alt="image" src="https://user-images.githubusercontent.com/86054136/186791776-9ef28ef4-7d0b-4078-86f9-412223defc07.png"> :    play / pause - aciona 
 e para o timer
 
-* <img width="43" alt="image" src="https://user-images.githubusercontent.com/86054136/186791970-de011e27-598a-4ed0-96c8-83d068e682ec.png"> : stop/ set - adiciona o tempo 
+* <img width="43" alt="image" src="https://user-images.githubusercontent.com/86054136/186791970-de011e27-598a-4ed0-96c8-83d068e682ec.png"> :   stop/ set - adiciona o tempo 
 a ser contato e reseta o tempo ao início
 
-* <img width="35" alt="image" src="https://user-images.githubusercontent.com/86054136/186792074-3c000db3-eeb6-4073-8538-92cc28af25bc.png"> : aumenta mais cinco minutos
+* <img width="35" alt="image" src="https://user-images.githubusercontent.com/86054136/186792074-3c000db3-eeb6-4073-8538-92cc28af25bc.png"> :   aumenta mais cinco minutos
 
-* <img width="41" alt="image" src="https://user-images.githubusercontent.com/86054136/186792118-b1bf2fcd-2d7b-42a5-9685-401e902fa64f.png"> : diminui cinco minutos]
+* <img width="41" alt="image" src="https://user-images.githubusercontent.com/86054136/186792118-b1bf2fcd-2d7b-42a5-9685-401e902fa64f.png"> :   diminui cinco minutos
 
 
 ![Pomodoro](https://user-images.githubusercontent.com/86054136/186795552-13f0690e-b903-4ca9-a79e-760161ebcda3.gif)
