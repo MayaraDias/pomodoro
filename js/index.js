@@ -105,6 +105,7 @@ function selectCardFire() {
 }
 
 function addTime() {
+  sound.pressButtonPlay()
   minutes = Number(displayMinutes.textContent) + 5
   if (minutes > 90) {
     minutes = 0
@@ -113,6 +114,7 @@ function addTime() {
 }
 
 function minusTime() {
+  sound.pressButtonPlay()
   minutes = Number(displayMinutes.textContent) - 5
   if (minutes < 0) {
     minutes = 0

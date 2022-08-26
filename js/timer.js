@@ -1,5 +1,13 @@
-import Controls from './controls.js'
 import Sound from './sound.js'
+import Controls from './controls.js'
+import { buttonPlay, buttonPause, buttonSet, buttonStop } from './elements.js'
+
+const controls = Controls({
+  buttonPlay,
+  buttonPause,
+  buttonSet,
+  buttonStop
+})
 
 export default function Timer({ displayMinutes, displaySeconds, minutes }) {
   let timerTimerOut
@@ -35,6 +43,8 @@ export default function Timer({ displayMinutes, displaySeconds, minutes }) {
         reseted()
         updateDisplay()
         Sound().timerEnd()
+        controls.resetControls()
+
         return
       }
 
