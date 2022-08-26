@@ -42,8 +42,8 @@ O temporizador também foi desenvolvido para o tema escuro
 
 
 
-
-### :hammer_and_wrench:Funcionalidades 
+------------------------------------------
+### :hammer_and_wrench: Funcionalidades 
 
 
 Para o controle do temporizador temos os botões play, pause, adicionar mais 5 (cinco) minutos e decrementar 5 (cinco) minutos
@@ -63,6 +63,7 @@ a ser contato e reseta o tempo ao início
 * <img width="47" alt="image" src="https://user-images.githubusercontent.com/86054136/186792118-b1bf2fcd-2d7b-42a5-9685-401e902fa64f.png"> :   diminui cinco minutos
 
 
+--------------------------------
 Os cards ao lado do timer emitem sons quando clicados, o som pode ser controlado por meio da barra logo abaixo deixando com ou sem volume.
 
 <p align = "center">
@@ -72,8 +73,8 @@ Os cards ao lado do timer emitem sons quando clicados, o som pode ser controlado
 
 ![Pomodoro](https://user-images.githubusercontent.com/86054136/186795552-13f0690e-b903-4ca9-a79e-760161ebcda3.gif)
 
-
-## :rocket: Tecnologias utilizadas e conceitos utilizados
+-----------------------------------------------------------
+## :rocket: Tecnologias e Conceitos utilizados:
 
 * HTML
 * CSS
@@ -95,7 +96,7 @@ A partir do ES6 foi possível dividir o código em arquivos separados, com o obj
 
 
 
-
+------------------------------------------------
 ## :pencil: Referências
 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules
