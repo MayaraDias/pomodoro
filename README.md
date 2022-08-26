@@ -39,10 +39,6 @@ O temporizador também foi desenvolvido para o tema escuro
 </p>
 
 
-<p align ="center">
-![Pomodoro_](https://user-images.githubusercontent.com/86054136/186794867-2cabd48a-a475-4bf2-89f0-fd1961429515.gif)
-</p>
-
 
 ## Funcionalidades 
 
@@ -61,5 +57,9 @@ a ser contato e reseta o tempo ao início
 
 * <img width="35" alt="image" src="https://user-images.githubusercontent.com/86054136/186792074-3c000db3-eeb6-4073-8538-92cc28af25bc.png"> : aumenta mais cinco minutos
 
-* <img width="41" alt="image" src="https://user-images.githubusercontent.com/86054136/186792118-b1bf2fcd-2d7b-42a5-9685-401e902fa64f.png"> : diminui cinco minutos
+* <img width="41" alt="image" src="https://user-images.githubusercontent.com/86054136/186792118-b1bf2fcd-2d7b-42a5-9685-401e902fa64f.png"> : diminui cinco minutos]
+
+
+![Pomodoro](https://user-images.githubusercontent.com/86054136/186795552-13f0690e-b903-4ca9-a79e-760161ebcda3.gif)
+
 
