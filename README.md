@@ -70,15 +70,23 @@ a ser contato e reseta o tempo ao início
 * CSS
 * Javascript
 
+### funções callback
+### Injeção de dependências
+### Padrão factory
 ### Módulos no Javascript
 
 Nesse projeto foi utilizado o conceito de modularização do javascript.
-Os módulos do 
-O objetivo da modularização do Javascript é facilitar na manutenção do código, dividir as responsabilidades, uma vez que os códigos podem ficar muito grandes o que complicaria na hora de fazer a manutenção, por exemplo.
-São utilizados 
+
+Uma aplicação que começa muitas vezes com poucas linhas de códigos pode alcançar um aumento considerável nessas linhas com a implementação de funcionalidades, por exemplo. Ou seja, uma aplicação pode terminar com muito mais linhas de códigos do que quando começou e tornar a manutenção desse código, uma tarefa díficil, que pode levar horas ou dias para sua conclusão. 
+
+A partir do ES6 foi possível dividir o código em arquivos separados, com o objetivo de facilitar a manutenção desse código e dividir as funcinalidades em arquivos que podem ser acessados por meio das instruções import e export.
 
 
-### :pencil: Referências
+
+
+
+
+## :pencil: Referências
 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules
 
