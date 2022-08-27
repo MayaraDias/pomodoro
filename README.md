@@ -1,6 +1,3 @@
-# pomodoro
-Desenvolvendo um temporizador de tempo para aplicação do método pomodoro.
-
 # Pomodoro
 Desenvolvendo um temporizador de tempo para aplicação do método pomodoro.
 
@@ -83,8 +80,9 @@ Os cards ao lado do timer emitem sons quando clicados, o som pode ser controlado
 * funções callback
 * Injeção de dependências
 * Padrão factory
-* Módulos no Javascript
 * Adicionar som com o javaScript
+* Módulos no Javascript
+
 
 Nesse projeto foi utilizado o conceito de modularização do javascript.
 
@@ -92,15 +90,23 @@ Uma aplicação que começa muitas vezes com poucas linhas de códigos pode alca
 
 A partir do ES6 foi possível dividir o código em arquivos separados, com o objetivo de facilitar a manutenção desse código e dividir as funcinalidades em arquivos que podem ser acessados por meio das instruções import e export.
 
+## 🍅 O que é pomodoro 
+É uma técnica desenvolvido pelo italiano Francesco Cirillo no final dos anos 80. Enquanto estudante Francesco desenvolveu a técnica como uma forma de melhorar seu rendimento nos estudos da faculdade. Com a ajuda de um timer em formato de tomate (pomodoro em italiano) ele iniciou seus estudos pausando o tempo de acordo com o timer.
+A técnica acabou por se revelar uma ótima metodologia para a gestão do tempo, baseando-se na ideia de que dividir o fluxo da atividade em blocos a concentração será melhor e mais intensa.
+O método funciona em ciclos, 25 minutos de foco e concentração na atividade a ser desenvolvida, após esses 25 minutos, deve ser realizado um intervalo de pelo menos 5 minutos para relaxar.
+Após o intervalo a atividade deve ser retomada novamente com concentração e foco total na atividade. Ess ciclo deve ser repetido até a conclusão da atividade.
 
 
+:computer_mouse:	 O projeto finalizado pode ser acessado através do link: https://mayaradias.github.io/pomodoro/
 
 
 ------------------------------------------------
 ## :pencil: Referências
 
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules
-https://www.w3schools.com/react/react_es6_modules.asp
+1. https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules
+2. https://www.w3schools.com/react/react_es6_modules.asp
+3. livro: A técnica Pomodoro: O sistema de gerenciamento de tempo que transformou o modo como trabalhamos - Francesco Cirillo. 
+
 
 
 
