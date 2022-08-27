@@ -8,8 +8,8 @@ O projeto foi desenvolvido a partir do Stage 5 do Programa Explorer da Rocketsea
 O desafio proposto era o desenvolvimento de um temporizador para a aplicação do método Pomodoro utilizando os conhecimentos adquiridos durante as aulas do stage 5.
 
 ## 🍅 O que é pomodoro 
-É uma técnica desenvolvido pelo italiano Francesco Cirillo no final dos anos 80. Enquanto estudante Francesco desenvolveu a técnica como uma forma de melhorar seu rendimento nos estudos da faculdade. Com a ajuda de um timer em formato de tomate (pomodoro em italiano) ele iniciou seus estudos pausando o tempo de acordo com o timer.
-A técnica acabou por se revelar uma ótima metodologia para a gestão do tempo, baseando-se na ideia de que dividir o fluxo da atividade em blocos a concentração será melhor e mais intensa.
+É uma técnica de gestão do tempo, desenvolvido pelo italiano Francesco Cirillo no final dos anos 80. Enquanto estudante Francesco desenvolveu o método como uma forma de melhorar seu rendimento nos estudos da faculdade. Com a ajuda de um timer em formato de tomate (pomodoro em italiano) ele iniciou seus estudos pausando o tempo de acordo com o timer.
+A técnica acabou por se revelar uma ótima metodologia para a gestão do tempo, baseando-se na ideia de que, dividir o fluxo da atividade em blocos a concentração será melhor e mais intensa.
 O método funciona em ciclos, 25 minutos de foco e concentração na atividade a ser desenvolvida, após esses 25 minutos, deve ser realizado um intervalo de pelo menos 5 minutos para relaxar.
 Após o intervalo a atividade deve ser retomada novamente com concentração e foco total na atividade. Ess ciclo deve ser repetido até a conclusão da atividade.
 É a partir dessa ideia que foi desenvolvido o temporizador Pomodoro.
