@@ -19,6 +19,10 @@ body {
   margin: 5rem auto;
 }
 
+input{
+  margin-top:1rem;
+}
+
 .wrapper {
   width: 37.5rem;
   display: flex;
