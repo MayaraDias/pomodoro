@@ -15,20 +15,19 @@
 }
 
 body {
-  display: grid;
-  justify-items: center;
-  margin-top: 5rem;
+  width: 37.5rem;
+  margin: 5rem auto;
 }
 
-body .darkAndLightMode {
-  position: fixed;
-  right: 25rem;
+.wrapper {
+  width: 37.5rem;
+  display: flex;
+  justify-content: end;
+  padding: 0 3.5rem 0 0;
 }
 
 main {
-  display: flex;
-  gap: 19rem;
-  padding: 10rem;
+  margin-top: 4rem;
 }
 
 i {
@@ -43,6 +42,7 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .timer {
@@ -55,6 +55,7 @@ i {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  align-items: center;
 }
 
 .controls button {
@@ -69,6 +70,7 @@ i {
   grid-template-areas: 'A B';
   gap: 4rem;
   align-items: center;
+  padding: 0 3rem;
 }
 
 .sounds i {
@@ -116,33 +118,24 @@ body.dark #turnOff {
   color: white;
 }
 /* ========== RESPONSIVIDADE ================*/
-@media (max-width: 768px) {
+@media (min-width: 900px) {
   body {
+    width: 120rem;
+    display: grid;
+    justify-items: center;
+    margin-top: 5rem;
+  }
+
+  .wrapper {
+    width: 120rem;
     display: flex;
+    justify-content: end;
+    padding: 0 20rem 0 0;
   }
 
   main {
-    display: block;
-    margin: auto;
-  }
-
-  .container {
-    margin-bottom: 5rem;
-  }
-
-  .sounds {
-    margin: auto;
-  }
-
-  body .darkAndLightMode {
-    position: fixed;
-    right: 22rem;
-  }
-
-  @media (max-width: 475px) {
-    body .darkAndLightMode {
-      position: fixed;
-      right: 12rem;
-    }
+    display: flex;
+    gap: 19rem;
+    padding: 3rem;
   }
 }
